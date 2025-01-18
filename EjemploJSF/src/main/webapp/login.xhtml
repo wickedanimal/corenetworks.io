@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="jakarta.faces.html"
+      xmlns:f="jakarta.faces.core">
+    <h:head>
+        <title>Login</title>
+    </h:head>
+    <h:body>
+
+        <f:view>
+            <h:form>
+                <h:outputLabel value="Usuario: " for="username"/>
+                <h:inputText id="username" value="#{loginBean.username}"/>
+                <h:outputLabel value="Contraseña: " for="password"/>
+                <h:inputSecret id="password" value="#{loginBean.password}"/>
+                <h:commandButton value="Login" action="#{loginBean.login}"/>
+                <h:outputText value="#{loginBean.message}" style="color: #ff0033"/>
+            </h:form>
+        </f:view>
+
+    </h:body>
+</html>
